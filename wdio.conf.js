@@ -30,8 +30,8 @@ export const config = {
             'pageLoadStrategy': 'normal',
         }
     ],
-    logLevel: 'info',
-    baseUrl: 'https://server-production-8aa75.up.railway.app/',
+    logLevel: 'error',
+    baseUrl: `https://${process.env.DOMAIN}/`,
     bail: 0,
     waitforTimeout: 30000,
     connectionRetryTimeout: 180000,
