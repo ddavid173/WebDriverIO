@@ -1,4 +1,3 @@
-import { Console } from 'console'
 import homePage from '../pageobjects/homePage.js'
 
 describe('Home Page Check', () => {

@@ -4,8 +4,21 @@ export const config = {
     CHROME_BROWSER_VERSION: browserVersion,
     runner: 'local',
     specs: [
-        './test/specs/**/*.js'
+        './src/test/test.home.js',
+        './src/test/test.cookies.js',
     ],
+    suites: {
+        home: [
+            './src/test/test.home.js'
+        ],
+        cookies: [
+            './src/test/test.cookies.js'
+        ],
+        regression: [
+            './src/test/test.home.js',
+            './src/test/test.cookies.js',
+        ],
+    },
     maxInstances: 10,
     capabilities: [
         {
