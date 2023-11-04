@@ -25,7 +25,13 @@ export const config = {
             'browserName': 'chrome',
             'browserVersion': browserVersion,
             'goog:chromeOptions': {
-                args: ["--headless", "--no-sandbox", "--disable-dev-shm-usage"]
+                args: [
+                    '--no-sandbox',
+                    '--disable-infobars',
+                    '--headless',
+                    '--disable-gpu',
+                    '--window-size=1920,1080'
+                ]
             },
             'pageLoadStrategy': 'normal',
         }
