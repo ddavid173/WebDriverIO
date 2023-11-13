@@ -1,6 +1,6 @@
 import * as main from './wdio.conf.js';
 const browserVersion = process.env.CHROME_BROWSER_VERSION || 'stable';
-
+const DOMAIN = process.env.DOMAIN || 'server-production-8aa75.up.railway.app';
 export const config = Object.assign(main.config, {
     logLevel: 'info',
     capabilities: [
@@ -29,4 +29,7 @@ export const config = Object.assign(main.config, {
             args: ['--silent']
         }]
       ],
+    onPrepare: function (config, capabilities) {
+        process.env.DOMAIN = DOMAIN;
+        },
     });
